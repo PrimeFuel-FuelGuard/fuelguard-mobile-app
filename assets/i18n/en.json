@@ -135,6 +135,8 @@
       "reason": {
         "NO_ELIGIBLE_DRIVER": "No eligible drivers are available. Select resources manually.",
         "NO_SUFFICIENT_ELIGIBLE_TANKER": "No eligible tanker has enough capacity. Select resources manually.",
+
+      //*---*
         "RESERVATION_CONFLICT": "Resources have conflicting reservations in that window. Try another window."
       }
     },
@@ -165,7 +167,7 @@
       "edit": "Edit selection",
       "revalidate": "Availability for this window will be checked again when you confirm.",
       "no-drivers": "No eligible drivers are available.",
-      "submitting": "Creating delivery…",
+      "submitting": "Creating delivery...",
       "unknown-capacity": "Capacity or volume has no valid unit",
       "invalid-window": "The end of the window must be after its start."
     },
