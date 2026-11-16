@@ -14,7 +14,6 @@ import '../../ordering/infrastructure/ordering_api.dart';
 
 const int _criticalLimit = 5;
 
-/// Carga independiente por tarjeta: una falla no oculta el resto del panel.
 class CardState<T> {
   const CardState({
     this.loading = true,
