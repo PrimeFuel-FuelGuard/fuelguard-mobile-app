@@ -15,9 +15,7 @@ android {
     }
 
     defaultConfig {
-        // Unique Application ID for the FuelGuard Android client.
         applicationId = "com.primefuel.fuelguard"
-        // SDK versions inherited from the Flutter toolchain configuration.
         // See https://flutter.dev/to/review-gradle-config for details.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
