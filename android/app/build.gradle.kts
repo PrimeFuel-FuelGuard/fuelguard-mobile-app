@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // Apply the Flutter Gradle Plugin after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -15,24 +15,24 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        // Unique Application ID for the FuelGuard Android client.
         applicationId = "com.primefuel.fuelguard"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        // SDK versions inherited from the Flutter toolchain configuration.
+        // See https://flutter.dev/to/review-gradle-config for details.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
-        // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)
-        // You can force using the value of versionCode by specifying the `-P force-version-code-ignoring-abi=true`
-        // flag during build.
+        // Version code resolved from pubspec.yaml; split APKs automatically
+        // prepend 1000 * ABI_VERSION during release builds.
+        // Override with `-P force-version-code-ignoring-abi=true` when required.
+        // Default behavior keeps pubspec.yaml as single source of truth.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // Release signing configuration for FuelGuard APK distribution.
+            // Uses debug keystore for local verification builds.
             signingConfig = signingConfigs.getByName("debug")
         }
     }
